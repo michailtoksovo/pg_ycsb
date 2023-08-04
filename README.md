@@ -53,17 +53,17 @@ Number of concurrent clients.
 
 **Workload A:**
 ```
-pgbench postgres -f scripts/zipfian/read.sql@50 -f scripts/zipfian/update.sql@50 -T60 -c10
+pgbench postgres -f zipfian/tpcb-like/read.sql@50 -f zipfian/tpcb-like/update.sql@50 -T60 -c10
 ```
 
 **Workload B:**
 ```
-pgbench postgres -f scripts/zipfian/read.sql@95 -f scripts/zipfian/update.sql@5 -T60 -c10
+pgbench postgres -f zipfian/tpcb-like/read.sql@95 -f zipfian/tpcb-like/update.sql@5 -T60 -c10
 ```
 
 **Workload C:**
 ```
-pgbench postgres -f scripts/zipfian/read.sql -T60 -c10
+pgbench postgres -f zipfian/tpcb-like/read.sql -T60 -c10
 ```
 
 **Workload D:**
@@ -72,7 +72,7 @@ Not implemented yet.
 
 **Workload E:**
 ```
-pgbench postgres -f scripts/zipfian/scan.sql@95 -f scripts/uniform/insert.sql@5 -T60 -c10
+pgbench postgres -f zipfian/tpcb-like/scan.sql@95 -f uniform/tpcb-like/insert.sql@5 -T60 -c10
 ```
 
 **Workload F:**
